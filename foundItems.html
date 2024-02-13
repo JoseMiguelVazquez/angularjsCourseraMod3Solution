@@ -1,0 +1,13 @@
+<div>
+    <h3>Search for: {{ searchTitle }}</h3>
+    <br>
+    <ul>
+        <li ng-repeat="item in items">
+            <h4>{{ item.name }} - {{ item.short_name }}</h4>
+            {{ item.description }}
+            <br>
+            <button ng-click="onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ul>
+    <h4 ng-if="warning !== ''"> {{ warning }} </h4>
+</div>
